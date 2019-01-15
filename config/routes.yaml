@@ -1,0 +1,18 @@
+currency_list:
+    path: /list
+    controller: App\Controller\DataController::currencyList
+    methods:    [GET]
+
+current_rate:
+    path:      /currentRate/{currCode}
+    controller: App\Controller\DataController::currentRate
+    methods:    [GET]
+    requirements:
+        currCode: '^[A-Z]{3}$'
+
+avg_rate:
+    path:      /avgRate/{currCode}
+    controller: App\Controller\DataController::avrageRate
+    methods:    [GET]
+    requirements:
+        currCode: '^[A-Z]{3}$'
